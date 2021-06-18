@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Form Validation Javascript</title>
+		<script src="script.js"></script>
+	</head>
+	<body>
+		<form>
+			<div class="form-group">
+				<label for="contact-name">Name</label>
+				<input
+					type="text"
+					class="form-control"
+					id="contact-name"
+					name="name"
+					placeholder="Enter your name.."
+					onkeyup="validateName()"
+				/>
+				<span class="error-message" id="name-error"></span>
+			</div>
+
+			<div class="form-group">
+				<label for="contact-phone">Phone Number</label>
+				<input
+					type="tel"
+					class="form-control"
+					id="contact-phone"
+					name="phone"
+					placeholder="Ex: 1231231234"
+					onkeyup="validatePhone()"
+				/>
+				<span class="error-message" id="phone-error"></span>
+			</div>
+
+			<div class="form-group">
+				<label for="contact-email">Email address</label>
+				<input
+					type="email"
+					class="form-control"
+					id="contact-email"
+					name="email"
+					placeholder="Enter Email"
+					onkeyup="validateEmail()"
+				/>
+				<span class="error-message" id="email-error"></span>
+			</div>
+
+			<div class="form-group">
+				<label for="contactMessage">Your Message</label>
+				<textarea
+					class="form-control"
+					rows="5"
+					id="contact-message"
+					name="message"
+					placeholder="Enter a brief message"
+					onkeyup="validateMessage()"
+				></textarea>
+				<span class="error-message" id="message-error"></span>
+			</div>
+
+			<button onclick="return validateForm()" class="btn btn-default">
+				Submit
+			</button>
+			<span class="error-message" id="submit-error"></span>
+		</form>
+	</body>
+</html>
